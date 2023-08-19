@@ -1,0 +1,21 @@
+body {
+    color: $color_dark_gray;
+    background-color: #fff;
+    @extend %tt_hover_300;
+}
+
+section {
+    transition: all 1s;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+

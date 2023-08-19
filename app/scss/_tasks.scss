@@ -1,0 +1,83 @@
+.tasks {
+    margin-bottom: 120px;
+    &__title {
+        @extend %title_section;
+        margin-bottom: 62px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 15px;
+    }
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        column-gap: 30px;
+        &:nth-child(1) {
+            .tasks__item__text {
+                max-width: 279px;                
+            }
+        }
+        &:nth-child(2) {
+            .tasks__item__text {
+                max-width: 427px;                
+            }
+        }
+
+        &__number {
+            @extend %roboto_900;
+            color: #F2F2F2;
+            font-size: 172px;
+            line-height: 78%;
+        }
+        &__text {
+            @extend %tt_hover_400;
+            font-size: 22px;
+            line-height: 36px;
+        }
+    }
+}
+
+@media(max-width: $mw_1100) {
+    .tasks {
+        &__item {
+            align-items: center;
+            &__text {
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+}
+
+@media(max-width: $mw_772) {
+    .tasks {
+        margin-bottom: 50px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__list {
+            flex-direction: column;
+            row-gap: 15px;
+            align-items: flex-start;
+        }
+        &__item {
+            &:nth-child(2) {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+@media(max-width: $mw_520) {
+    .tasks {
+        &__item {
+            align-items: flex-start;
+            column-gap: 15px;
+            &__number {
+                font-size: 100px;
+            }
+        }
+    }
+}
